@@ -5,6 +5,8 @@ ruby '2.7.0'
 
 gem 'mini_racer'
 gem 'devise'
+gem 'bootstrap', '~> 4.6.1'
+gem 'jquery-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.6', '>= 5.2.6.3'

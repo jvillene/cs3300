@@ -1,29 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Projects</h1>
+<h1>Capstone Experience</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<%= link_to 'New Project', new_project_path %>
 
-  <tbody>
-    <% @projects.each do |project| %>
-      <tr>
-        <td><%= project.title %></td>
-        <td><%= project.description %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <div class="container">
+    <div class="row">
+      <tbody>
+        <% @projects.each do |project| %>
+          <div class="col-md-4">
+            <tr>
+              <h2><%= project.title %></h2>
+              <td><%= project.description %><br></td>
+              <td><%= link_to 'Show', project %></td>
+              <td><%= link_to 'Edit', edit_project_path(project) %></td>
+              <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          </div>
+        <% end %>
+      </tbody>
+    </div>
+    <hr>
+  </div>
 
 <br>
 
-<%= link_to 'New Project', new_project_path %>
+<footer class="container">
+      <p>&copy; CS3300 UCCS 2022</p>
+    </footer>
